@@ -1,0 +1,70 @@
+
+Title of the Assignment: Write a program to implement Parallel Bubble Sort. Use existing algorithms and measure the performance of sequential and parallel algorithms.
+
+Objective of the Assignment: Students should be able to Write a program to implement Parallel Bubble Sort and can measure the performance of sequential and parallel algorithms.
+
+Prerequisite:
+1.	Basic of programming language
+2.	Concept of Bubble Sort
+3.	Concept of Parallelism
+
+What is Bubble Sort?
+
+Bubble Sort is a simple sorting algorithm that works by repeatedly swapping adjacent elements if they are in the wrong order. It is called "bubble" sort because the algorithm moves the larger elements towards the end of the array in a manner that resembles the rising of bubbles in a liquid.
+
+The basic algorithm of Bubble Sort is as follows:
+
+1.	Start at the beginning of the array.
+2.	Compare the first two elements. If the first element is greater than the second element, swap them.
+3.	Move to the next pair of elements and repeat step 2.
+4.	Continue the process until the end of the array is reached.
+5.	If any swaps were made in step 2-4, repeat the process from step 1.
+
+The time complexity of Bubble Sort is O(n^2), which makes it inefficient for large lists. However, it has the advantage of being easy to understand and implement, and it is useful for educational purposes and for sorting small datasets.
+
+Bubble Sort advantages and use cases:
+
+1.	Simplicity
+2.	Educational purposes
+3.	Small datasets
+4.	Partially sorted datasets
+5.	Performance optimization 
+
+
+Concept of OpenMP
+
+●	OpenMP (Open Multi-Processing) is an application programming interface (API) that supports shared-memory parallel programming in C, C++, and Fortran. It is used to write parallel programs that can run on multicore processors, multiprocessor systems, and parallel computing clusters.
+●	OpenMP provides a set of directives and functions that can be inserted into the source code of a program to parallelize its execution. These directives are simple and easy to use, and they can be applied to loops, sections, functions, and other program constructs. The compiler then generates parallel code that can run on multiple processors concurrently.
+●	OpenMP programs are designed to take advantage of the shared-memory architecture of modern
+processors, where multiple processor cores can access the same memory. OpenMP uses a fork-join model of parallel execution, where a master thread forks multiple worker threads to execute a parallel region of the code, and then waits for all threads to complete before continuing with the sequential part of the code.
+How Parallel Bubble Sort Work
+
+●	Parallel Bubble Sort is a modification of the classic Bubble Sort algorithm that takes advantage of parallel processing to speed up the sorting process.
+
+●	In parallel Bubble Sort, the list of elements is divided into multiple sublists that are sorted concurrently by multiple threads. Each thread sorts its sublist using the regular Bubble Sort algorithm. When all sublists have been sorted, they are merged together to form the final sorted list.
+
+●	The parallelization of the algorithm is achieved using OpenMP, a programming API that supports parallel processing in C++, Fortran, and other programming languages. OpenMP provides a set of compiler directives that allow developers to specify which parts of the code can be executed in parallel.
+
+●	In the parallel Bubble Sort algorithm, the main loop that iterates over the list of elements is divided into multiple iterations that are executed concurrently by multiple threads. Each thread sorts a subset of the list, and the threads synchronize their work at the end of each iteration to ensure that the elements are properly ordered.
+
+●	Parallel Bubble Sort can provide a significant speedup over the regular Bubble Sort algorithm, especially when sorting large datasets on multi-core processors. However, the speedup is limited by the overhead of thread creation and synchronization, and it may not be worth the effort for small datasets or when using a single-core processor.
+
+How to measure the performance of sequential and parallel algorithms?
+To measure the performance of sequential Bubble sort and parallel Bubble sort algorithms, you can follow these steps:
+
+1.	Implement both the sequential and parallel Bubble sort algorithms.
+2.	Choose a range of test cases, such as arrays of different sizes and different degrees of sortedness, to test the performance of both algorithms.
+3.	Use a reliable timer to measure the execution time of each algorithm on each test case.
+4.	Record the execution times and analyze the results.
+
+When measuring the performance of the parallel Bubble sort algorithm, you will need to specify the number of threads to use. 
+
+
+
+Conclusion-	In this way we can implement Bubble Sort in parallel way using OpenMP also come to know how to how to measure performance of serial and parallel algorithm
+
+
+
+ 
+ 
+
